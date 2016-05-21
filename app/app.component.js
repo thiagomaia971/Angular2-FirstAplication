@@ -12,12 +12,11 @@ var core_1 = require('@angular/core');
 var login_component_1 = require('./login/login.component');
 var AppComponent = (function () {
     function AppComponent() {
-        this.pageTitle = "My First App in Angular 2";
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>{{pageTitle}}</h1> <login></login>',
+            template: ' <login></login>',
             directives: [login_component_1.LoginComponent]
         }), 
         __metadata('design:paramtypes', [])
