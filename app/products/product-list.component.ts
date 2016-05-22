@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
+import { ProductFilterPipe } from './product-filter.pipe';
+import { MoneyPipe } from '../money-pipe';
+import { StarComponent } from '../shared/star.component'
 
 @Component({
     selector: 'pm-products',
     templateUrl: 'app/products/product-list.component.html',
-    styleUrls: ['app/products/product-list.component.css']
+    styleUrls: ['app/products/product-list.component.css'],
+    pipes: [ProductFilterPipe, MoneyPipe],
+    directives: [StarComponent]
 })
-export class ProductListComponent{
+export class ProductListComponent implements OnInit{
     pageTitle: string = "Product Lists";
     
     imageWidth: number = 50;
@@ -70,5 +75,9 @@ export class ProductListComponent{
     
     toggleImage(): void {
         this.showImage = !this.showImage;
-    }  
+    }
+    
+    ngOnInit(): void{
+        console.log('In OnInit');
+    }
 }

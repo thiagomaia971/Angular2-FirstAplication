@@ -40,7 +40,7 @@
                 </thead>
                 
                 <tbody>
-                    <tr *ngFor='let product of products'>
+                    <tr *ngFor='let product of products | productFilter : listFilter'>
                         <td>
                             <img *ngIf='showImage'
                                  [src]='product.imageUrl'
@@ -51,8 +51,8 @@
                         <td>{{ product.productName }}</td>
                         <td>{{ product.productCode }}</td>
                         <td>No</td>
-                        <td>{{ product.price | currency:USD }}</td>
-                        <td>{{ product.starRating }}</td>
+                        <td>{{ product.price | moneyPipe }}</td>
+                        <td><ai-star [rating]='product.starRating'></ai-star></td>
                     </tr>
                 </tbody>
             </table>
