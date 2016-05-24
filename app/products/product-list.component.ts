@@ -18,8 +18,8 @@ export class ProductListComponent implements OnInit{
     imageMargin: number = 2;
     showImage: boolean = false;
     
-    listFilter: string = '';
-    
+    listFilter: string = ''; 
+     
     products: IProduct[] = [
         {
             "productId": 1,

@@ -9,24 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ProductFilterPipe = (function () {
-    function ProductFilterPipe() {
+var StarComponent = (function () {
+    function StarComponent() {
     }
-    ProductFilterPipe.prototype.transform = function (value, args) {
-        var filter = args[0] ? args[0].toLocaleLowerCase() : null; // se tiver algum argumento, 
-        // coloca em lowerCase, se não,
-        // retorna null
-        return filter ? value.filter(function (product) {
-            return product.productName.toLocaleLowerCase().indexOf(filter) == 0;
-        }) : value;
+    StarComponent.prototype.ngOnChanges = function () {
+        this.starWidth = this.rating * 86 / 5;
     };
-    ProductFilterPipe = __decorate([
-        core_1.Pipe({
-            name: 'productFilter'
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], StarComponent.prototype, "rating", void 0);
+    StarComponent = __decorate([
+        core_1.Component({
+            selector: 'ai-star',
+            templateUrl: 'app/shared/star.component.html',
+            styleUrls: ['app/shared/star.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], ProductFilterPipe);
-    return ProductFilterPipe;
+    ], StarComponent);
+    return StarComponent;
 }());
-exports.ProductFilterPipe = ProductFilterPipe;
-//# sourceMappingURL=product-filter.pipe.js.map
+exports.StarComponent = StarComponent;
+//# sourceMappingURL=star.component.js.map
