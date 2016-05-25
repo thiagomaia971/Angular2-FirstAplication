@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 import { ProductFilterPipe } from './product-filter.pipe';
-import { MoneyPipe } from '../money-pipe';
+import { MoneyPipe } from '../shared/money-pipe';
 import { StarComponent } from '../shared/star.component'
 
 @Component({
@@ -12,7 +12,7 @@ import { StarComponent } from '../shared/star.component'
     directives: [StarComponent]
 })
 export class ProductListComponent implements OnInit{
-    pageTitle: string = "Product Lists";
+    pageTitle: string = "Product List";
     
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -79,5 +79,9 @@ export class ProductListComponent implements OnInit{
     
     ngOnInit(): void{
         console.log('In OnInit');
+    }
+    
+    onRatingClicked(message: string) : void{
+        this.pageTitle = 'Product List: ' + message;
     }
 }

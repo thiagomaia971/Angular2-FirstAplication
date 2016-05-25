@@ -9,7 +9,8 @@
                 Filter By: 
             </div>
             <div class="col-md-4">
-                <input type="text" [(ngModel)]='listFilter'/>
+                <input type="text" 
+                [(ngModel)]='listFilter'/>
             </div>
         </div>
         
@@ -52,7 +53,8 @@
                         <td>{{ product.productCode }}</td>
                         <td>No</td>
                         <td>{{ product.price | moneyPipe }}</td>
-                        <td><ai-star [rating]='product.starRating'></ai-star></td>
+                        <td><ai-star [rating]='product.starRating'
+                                    (ratingClicked)='onRatingClicked($event)'></ai-star></td>
                     </tr>
                 </tbody>
             </table>

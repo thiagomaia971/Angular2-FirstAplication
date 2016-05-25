@@ -6,6 +6,6 @@ import { PipeTransform, Pipe } from '@angular/core';
 
 export class MoneyPipe implements PipeTransform{
     transform(value: number, args: string[]) : string{
-        return 'R$ '+value;
+        return 'R$ '+ value;
     }
 }

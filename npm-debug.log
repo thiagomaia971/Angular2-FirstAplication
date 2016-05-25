@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'start' ]
+2 info using npm@3.9.2
+3 info using node@v0.10.45
+4 verbose node symlink /usr/bin/node
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info lifecycle angular2-quickstart@1.0.0~prestart: angular2-quickstart@1.0.0
+7 silly lifecycle angular2-quickstart@1.0.0~prestart: no script for prestart, continuing
+8 info lifecycle angular2-quickstart@1.0.0~start: angular2-quickstart@1.0.0
+9 verbose lifecycle angular2-quickstart@1.0.0~start: unsafe-perm in lifecycle true
+10 verbose lifecycle angular2-quickstart@1.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/ubuntu/Documents/Angular2-FirstAplication/node_modules/.bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+11 verbose lifecycle angular2-quickstart@1.0.0~start: CWD: /home/ubuntu/Documents/Angular2-FirstAplication
+12 silly lifecycle angular2-quickstart@1.0.0~start: Args: [ '-c', 'tsc && concurrently "npm run tsc:w" "npm run lite" ' ]
+13 silly lifecycle angular2-quickstart@1.0.0~start: Returned: code: 2  signal: null
+14 info lifecycle angular2-quickstart@1.0.0~start: Failed to exec start script
+15 verbose stack Error: angular2-quickstart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
+15 verbose stack Exit status 2
+15 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:245:16)
+15 verbose stack     at EventEmitter.emit (events.js:98:17)
+15 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+15 verbose stack     at ChildProcess.emit (events.js:98:17)
+15 verbose stack     at maybeClose (child_process.js:766:16)
+15 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:833:5)
+16 verbose pkgid angular2-quickstart@1.0.0
+17 verbose cwd /home/ubuntu/Documents/Angular2-FirstAplication
+18 error Linux 4.2.0-27-generic
+19 error argv "node" "/usr/bin/npm" "start"
+20 error node v0.10.45
+21 error npm  v3.9.2
+22 error code ELIFECYCLE
+23 error angular2-quickstart@1.0.0 start: `tsc && concurrently "npm run tsc:w" "npm run lite" `
+23 error Exit status 2
+24 error Failed at the angular2-quickstart@1.0.0 start script 'tsc && concurrently "npm run tsc:w" "npm run lite" '.
+24 error Make sure you have the latest version of node.js and npm installed.
+24 error If you do, this is most likely a problem with the angular2-quickstart package,
+24 error not with npm itself.
+24 error Tell the author that this fails on your system:
+24 error     tsc && concurrently "npm run tsc:w" "npm run lite"
+24 error You can get information on how to open an issue for this project with:
+24 error     npm bugs angular2-quickstart
+24 error Or if that isn't available, you can get their info via:
+24 error     npm owner ls angular2-quickstart
+24 error There is likely additional logging output above.
+25 verbose exit [ 1, true ]
