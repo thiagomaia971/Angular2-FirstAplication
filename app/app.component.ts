@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductListComponent } from './products/product-list.component';
+import { ProductService } from './products/product.service';
 
 @Component({
   selector: 'my-app',
@@ -8,7 +9,8 @@ import { ProductListComponent } from './products/product-list.component';
          <pm-products></pm-products>
      </div>
   `,
-  directives: [ProductListComponent]
+  directives: [ProductListComponent],
+  providers: [ProductService] // adicionando o servico para toda a aplicação
 })
 
 export class AppComponent {
