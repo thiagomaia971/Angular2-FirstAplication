@@ -6,6 +6,7 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-2">
+                {{errorMessage}}
                 Filter By: 
             </div>
             <div class="col-md-4">
@@ -49,7 +50,9 @@
                                  [style.width.px]="imageWidth"
                                  [style.margin.px]="imageMargin">
                         </td>
-                        <td>{{ product.productName }}</td>
+                        <td>
+                            <a [routerLink]="['ProductDetail', {id: product.productId}]">{{product.productName}}</a>
+                        </td>
                         <td>{{ product.productCode }}</td>
                         <td>No</td>
                         <td>{{ product.price | moneyPipe }}</td>
